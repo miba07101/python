@@ -1,5 +1,6 @@
 import random
 
+
 # definujem metodu na zadanie 6 cisel od uzivatela
 def get_user_numbers():
     user_input = input("Zadaj 6 cisel (1-20), oddelenych ciarkou: ")
@@ -10,6 +11,7 @@ def get_user_numbers():
     user_input_set_int = {int(input_number) for input_number in user_input_list}
     return user_input_set_int
 
+
 # definujem metodu na vytvorenie 6 nahodnych cisel
 def create_lottery_numbers():
     # vytvorim prazdny set
@@ -17,8 +19,9 @@ def create_lottery_numbers():
     # naplnim prazdny set 6 cislami{values} pomocou WHILE
     while len(values) < 6:
         # prida jednotlive cislo do setu
-        values.add(random.randint(1,20))
+        values.add(random.randint(1, 20))
     return values
+
 
 # porovnam zhodu medzi user a lottery - set.intersection
 
@@ -28,4 +31,8 @@ print(user_numbers)
 print(lottery_numbers)
 # porovnanie
 matched_numbers = user_numbers.intersection(lottery_numbers)
-print("Trafil si cisla {}. Celkova vyhra je {}".format(matched_numbers, 100 ** len(matched_numbers)))
+print(
+    "Trafil si cisla {}. Celkova vyhra je {}".format(
+        matched_numbers, 100 ** len(matched_numbers)
+    )
+)
