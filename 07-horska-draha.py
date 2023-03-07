@@ -15,6 +15,7 @@ if height > 100:
     photo = input("Chces sa vyfotit? [ano-nie]\n")
     if photo == "ano":
         photo_price = 50
+        # pripocita k uctu este cenu fotky
         bill += photo_price
         print(f"Cena za fotku je {photo_price} eur. Celkova cena je {bill} eur")
     else:
