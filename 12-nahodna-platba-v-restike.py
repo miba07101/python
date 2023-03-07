@@ -13,4 +13,4 @@ names_list = names.split(", ")
 number = random.randint(0, len(names_list) - 1)
 
 # vypisem kto bude dnes platit
-print(f"Dnes bude plati: {names_list[number]}")
+print(f"Dnes bude platit: {names_list[number]}")
