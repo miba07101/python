@@ -62,22 +62,39 @@ num_letters = int(input("Kolko pismien chcete v hesle?\n"))
 num_numbers = int(input("Kolko cisel chcete v hesle?\n"))
 num_char = int(input("Kolko znakov chcete v hesle?\n"))
 
-# nahodny vyber znakov pomocou funkcie random.choices()
-letters_ran_list = random.choices(letters, k=num_letters)
-numbers_ran_list = random.choices(numbers, k=num_numbers)
-char_ran_list = random.choices(special_char, k=num_char)
-
-# vytvorenie jedneho listu z 3 listov
-# to je len pomocne, pretoze to vypisuje vysledok ako list v liste
-# potrebujem potom cyklus pre vytvorenie len jedneho listu
-all_list = [letters_ran_list, numbers_ran_list, char_ran_list]
-
-# cyklus pre vytvorenie jedneho listu
-# polozky z 3 listov v podstate prepisem do jedneho listu
+# nahodny vyber pismen, cislic, znakov
 password_list = []
-for item in all_list:
-    password_list += item
+for index in range(1, num_letters):
+    ran_index = random.randint(0, len(letters) - 1)
+    password_list.append(letters[ran_index])
+
+for index in range(1, num_numbers):
+    ran_index = random.randint(0, len(numbers) - 1)
+    password_list.append(numbers[ran_index])
+
+for index in range(1, num_char):
+    ran_index = random.randint(0, len(special_char) - 1)
+    password_list.append(special_char[ran_index])
+
 print(password_list)
+
+# iny sposob predchadzajuceho
+# # nahodny vyber znakov pomocou funkcie random.choices()
+# letters_ran_list = random.choices(letters, k=num_letters)
+# numbers_ran_list = random.choices(numbers, k=num_numbers)
+# char_ran_list = random.choices(special_char, k=num_char)
+
+# # vytvorenie jedneho listu z 3 listov
+# # to je len pomocne, pretoze to vypisuje vysledok ako list v liste
+# # potrebujem potom cyklus pre vytvorenie len jedneho listu
+# all_list = [letters_ran_list, numbers_ran_list, char_ran_list]
+#
+# # cyklus pre vytvorenie jedneho listu
+# # polozky z 3 listov v podstate prepisem do jedneho listu
+# password_list = []
+# for item in all_list:
+#     password_list += item
+# print(password_list)
 
 # funkcia random.shuffle pre nahodne rozhodenie poloziek v liste
 random.shuffle(password_list)
