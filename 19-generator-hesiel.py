@@ -64,15 +64,20 @@ num_char = int(input("Kolko znakov chcete v hesle?\n"))
 
 # nahodny vyber pismen, cislic, znakov
 password_list = []
-for index in range(1, num_letters):
+# !!! pozor range berie poslednu hodnotu o 1 menej
+# cize ak chcem napr. 3 nahodne cisla, cize opakovat cyklus 3krat
+# tak musim dat range napr. (0, 3) alebo (1, 4)
+for index in range(0, num_letters):
+    # vytvorenie indexu pre polozku/pismeno v rozsahu listu letters
     ran_index = random.randint(0, len(letters) - 1)
+    # pridanie nahodne vypraneho pismena do noveho listu
     password_list.append(letters[ran_index])
 
-for index in range(1, num_numbers):
+for index in range(0, num_numbers):
     ran_index = random.randint(0, len(numbers) - 1)
     password_list.append(numbers[ran_index])
 
-for index in range(1, num_char):
+for index in range(0, num_char):
     ran_index = random.randint(0, len(special_char) - 1)
     password_list.append(special_char[ran_index])
 
