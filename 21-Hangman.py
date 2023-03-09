@@ -50,7 +50,7 @@ hangman_stages = [
 
 # pocet zivotov / pokusov
 # hodnota 6 podla poctu obrazkov hangman_stages
-lives = 6
+lives = 7
 
 # vytvorenie zoznamu slov zo suboru 21-Hangman-words.txt
 with open("21-Hangman-words.txt") as f:
@@ -58,7 +58,7 @@ with open("21-Hangman-words.txt") as f:
 
 # vyber nahodneho slova zo zoznamu
 word_ran = words_list[random.randint(0, len(words_list) - 1)]
-# print(word_ran)
+print(word_ran)
 
 # vytvorenie skryteho slova z podtrzitok
 word_hidden = ""
@@ -93,15 +93,16 @@ while "_" in word_hidden_list:
     if guess_letter not in word_ran:
         lives -= 1
         # musel som dat abs(lives-6) pretoze inac by som musel prehodit obrazky
-        print(hangman_stages[abs(lives - 6)])
+        print(hangman_stages[(7 - lives) - 1])
         print(f"Zostavajuci pocet zivotov je {lives}")
 
     if lives == 0:
         print("Skoda, prehral si :(")
+        # break ukonci cyklus while
         break
 
     # print(word_hidden_list)
     print(f"\n{word_hidden}\n")
 
-    if "_" not in word_hidden_list:
-        print("Vyhral si")
+if "_" not in word_hidden_list:
+    print("HURAAAA! VYHRAL SI :)")
