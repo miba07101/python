@@ -8,7 +8,7 @@ def grreting(name):
         print("... a som ZOPKACIK :)")
 
 
-name = input("Zadj svoje meno: ")
+name = input("Zadaj svoje meno: ")
 grreting(name)
 
 # pozn:
