@@ -58,7 +58,7 @@ with open("21-Hangman-words.txt") as f:
 
 # vyber nahodneho slova zo zoznamu
 word_ran = words_list[random.randint(0, len(words_list) - 1)]
-print(word_ran)
+# print(word_ran)
 
 # vytvorenie skryteho slova z podtrzitok
 word_hidden = ""
