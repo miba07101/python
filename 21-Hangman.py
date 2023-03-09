@@ -98,6 +98,7 @@ while "_" in word_hidden_list:
 
     if lives == 0:
         print("Skoda, prehral si :(")
+        print(word_ran)
         # break ukonci cyklus while
         break
 
