@@ -3,12 +3,12 @@ import random
 import os
 
 
-def random_number():
-    random_num = random.randint(1, 100)
-    return random_num
+def random_num():
+    random_number = random.randint(1, 100)
+    return random_number
 
 
-def guess(guess_number, user_number):
+def guess_num(guess_number, user_number):
     if user_number not in range(1, 101):
         return "Tipujes mimo rozsah cisel :("
     elif user_number < guess_number:
@@ -24,20 +24,20 @@ def difficulty_lvl(difficulty):
     return difficulty_dic[difficulty]
 
 
-def guess_num():
+def guess_game():
     print("Vitajte v hre Guess secret number.")
     print("Myslim si cislo od 1 do 100. Skus uhadnut ake :)")
 
     user_difficulty = input("Vyber si obtiaznost. [easy / hard]: ")
     life = difficulty_lvl(user_difficulty)
     print(f"Pocet pokusov je: {life}")
-    result_random_num = random_number()
+    result_random_num = random_num()
     # print(result_random_num)
     lets_continue = ""
 
     while life != 0:
         user_num = int(input("Tipni si cislo: "))
-        result_guess = guess(result_random_num, user_num)
+        result_guess = guess_num(result_random_num, user_num)
         print(result_guess)
         if result_guess != "Hura uhadol si cislo :)":
             life -= 1
@@ -52,10 +52,10 @@ def guess_num():
 
     if lets_continue == "yes":
         os.system("clear")
-        guess_num()
+        guess_game()
 
     elif lets_continue == "no":
         os.system("clear")
 
 
-guess_num()
+guess_game()
