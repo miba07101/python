@@ -39,5 +39,17 @@ user_choice = input("Co by ste si dal? (esspresso, latte, cappuccino): ")
 # mozem zadat a "report" pre vypis zostatku ingrediencii
 if user_choice == "report":
     print(resources)
+
+# volba napoja - hlavny program
+if user_choice == "espresso":
     sum = coins()
-    refund()
+    print(f"Cena espressa je: {espresso_price} KC")
+    refund(espresso_price, sum)
+elif user_choice == "latte":
+    sum = coins()
+    print(f"Cena latte je: {espresso_price} KC")
+    refund(latte_price, sum)
+elif user_choice == "cappuccino":
+    sum = coins()
+    print(f"Cena cappuccina je: {espresso_price} KC")
+    refund(cappuccino_price, sum)
