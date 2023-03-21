@@ -10,8 +10,9 @@ obj_question_list = []
 for one_item in question_data:
     # ulozim si z question_data listu, ktory je tvoreny dictionary
     # jednotlive polozky dictionary (text a answer)
-    text_dic = one_item["text"]
-    answer_dic = one_item["answer"]
+    # "text", "answer" mozem zmenit podla toho co je zadane v data.py ako "key"
+    text_dic = one_item["question"]
+    answer_dic = one_item["correct_answer"]
     # vytvorim objekt obj_question podla class Questions
     # objekt obsahuje parametre (text a answer)
     obj_question = Questions(text_dic, answer_dic)
