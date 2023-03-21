@@ -8,9 +8,23 @@ class Robot:
         # zadam rovno ako cislo/hodnotu
         self.ukony_do_kontroly = 1000
 
+    def krok_vpred(self):
+        print("Robot urobil krok vpred")
+        # odpocitam jeden ukon
+        self.ukony_do_kontroly -= 1
+        print(f"Zostavajuci pocet ukonov do kontroly: {self.ukony_do_kontroly}")
+
+    def krok_vzad(self):
+        print("Robot urobil krok vzad")
+        # odpocitam jeden ukon
+        self.ukony_do_kontroly -= 1
+        print(f"Zostavajuci pocet ukonov do kontroly: {self.ukony_do_kontroly}")
+
 
 # vytvorenie objektu robot_1 podla class/triedy Robot
 robot_1 = Robot(48, 0.5)
 
-print(robot_1.batery)
-print(robot_1.dni_do_opravy)
+robot_1.krok_vpred()
+robot_1.krok_vpred()
+robot_1.krok_vpred()
+robot_1.krok_vzad()
