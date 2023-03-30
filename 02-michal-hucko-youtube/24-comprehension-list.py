@@ -34,8 +34,8 @@ result = [len(word) for word in veta.split()]
 print(result)
 
 # uloha:
-# napis funkciu list_of_list, ktora na vstupe dostanecez parameter pole celych cisel
-# vacsich ako ), napr. [0,2,3,2] a nasledne vrati pole cisel ktore bude obsahovat pre
+# napis funkciu list_of_list, ktora na vstupe dostane parameter pola celych cisel
+# vacsich ako 0, napr. [0,2,3,2] a nasledne vrati pole cisel ktore bude obsahovat pre
 # kazde cislo pole s cislami od 0 po dane cislo
 
 # vstup [0,2,3,2]
