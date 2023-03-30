@@ -138,7 +138,7 @@ def main_game():
             game_grid(grid)
             break
         if check_continue(grid) is False:
-            print("GAME OVER - TWICE")
+            print("GAME OVER - DRAW")
             game_grid(grid)
             break
 
