@@ -65,6 +65,6 @@ def merge(n1, n2):
 
 
 if __name__ == "__main__":
-    num1 = [1, 2, 4, 22]
+    num1 = [1, 2, 4, 22, 0, -5]
     num2 = [2, 3, 6, 10]
     print(merge(num1, num2))
