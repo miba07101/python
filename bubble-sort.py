@@ -1,13 +1,22 @@
-numbers = [3, 5, 2, -1, 4]
+numbers = [3, 4, 1, 2, 5]
 print(numbers)
 
 for i in range(0, len(numbers)):
-    print(numbers[i])
-    for j in range(i, len(numbers)):
-        # print(numbers[i], numbers[j])
-        if numbers[i] > numbers[j]:
-            numbers[i], numbers[j] = numbers[j], numbers[i]
+    # print(numbers[i])
+    swapped = False
+    for j in range(0, len(numbers) - i - 1):
+        # print(numbers)
+        if numbers[j] > numbers[j + 1]:
+            numbers[j], numbers[j + 1] = numbers[j + 1], numbers[j]
             # print(numbers[i], numbers[j])
-            print(numbers)
+            # print(numbers)
+            swapped = True
+
+    if swapped == False:  # if not swapped: - to iste len iny zapis
+        break
 
 print(numbers)
+
+items = [3, 4, 1, 2, 5]
+items.sort()
+print(items)
