@@ -24,7 +24,6 @@ def create_lottery_numbers():
 
 
 # porovnam zhodu medzi user a lottery - set.intersection
-
 user_numbers = get_user_numbers()
 lottery_numbers = create_lottery_numbers()
 print(user_numbers)
