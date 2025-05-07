@@ -7,7 +7,7 @@ bill = 0
 
 if pizza == "s":
     bill = 100
-    if feferony == "ano":
+if feferony == "ano":
         bill += 20
     else:
         bill += 0
